@@ -156,6 +156,18 @@ sudo journalctl -u op-geth.service -f
 sudo journalctl -u op-node.service -f
 ```
 ## Stop and restart node
+```bash
 sudo systemctl stop op-node.service
 sudo systemctl stop op-geth.service
+```
+```bash
+sudo systemctl daemon-reload
+sudo systemctl restart op-node
+sudo systemctl restart op-geth
+```
+## Show your key
+```bash
+sudo cat /etc/optimism/jwt.txt
+```
+
 
